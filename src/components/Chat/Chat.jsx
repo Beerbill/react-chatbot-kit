@@ -163,6 +163,7 @@ const Chat = ({
             <button
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
+              disabled={input.length <= 0}
             >
               <ChatIcon className="react-chatbot-kit-chat-btn-send-icon" />
             </button>
