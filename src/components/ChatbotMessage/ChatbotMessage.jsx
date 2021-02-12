@@ -84,7 +84,7 @@ const ChatbotMessage = ({
                 <ConditionallyRender
                   ifTrue={loading}
                   show={<Loader />}
-                  elseShow={<span>{message}</span>}
+                  elseShow={<span dangerouslySetInnerHTML={{__html: message}} />}
                 />
                 <ConditionallyRender
                   ifTrue={withAvatar}
