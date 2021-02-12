@@ -34,10 +34,6 @@ const Chat = ({
     }, 50);
   };
 
-  useEffect(() => {
-    scrollIntoView();
-  });
-
   const showAvatar = (messages, index) => {
     if (index === 0) return true;
 
@@ -96,6 +92,7 @@ const Chat = ({
           {...chatBotMessageProps.passDownProps}
           customComponents={customComponents}
           messages={messages}
+          scrollIntoView={scrollIntoView}
           setState={setState}
         />
       );

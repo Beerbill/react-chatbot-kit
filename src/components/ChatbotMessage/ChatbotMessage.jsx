@@ -12,6 +12,7 @@ const ChatbotMessage = ({
   withAvatar,
   loading,
   messages,
+  scrollIntoView,
   customComponents,
   setState,
   customStyles,
@@ -43,6 +44,9 @@ const ChatbotMessage = ({
       setTimeout(() => toggleShow(true), delay);
     } else {
       toggleShow(true);
+      if (message !== '') {
+        scrollIntoView();
+      }
     }
   }, [delay]);
 

@@ -20,6 +20,7 @@ const ChatbotMessageWithWidget = ({
         {...passDownProps}
         customStyles={customStyles.botMessageBox}
         messages={messages}
+        scrollIntoView={scrollIntoView}
         withAvatar={withAvatar}
         setState={setState}
         customComponents={customComponents}
