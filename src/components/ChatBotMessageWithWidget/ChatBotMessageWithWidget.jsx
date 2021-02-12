@@ -28,6 +28,7 @@ const ChatbotMessageWithWidget = ({
         ifTrue={!passDownProps.loading}
         show={widgetRegistry.getWidget(passDownProps.widget, {
           ...state,
+          passDownProps,
           scrollIntoView,
         })}
       />

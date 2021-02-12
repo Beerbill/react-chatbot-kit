@@ -24,6 +24,7 @@ class WidgetRegistry {
       ...getObject(widgetObject.props),
       ...this.mapStateToProps(widgetObject.mapStateToProps, state),
       setState: this.setState,
+      data: state.passDownProps,
       actionProvider: this.actionProvider,
     };
 
