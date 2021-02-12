@@ -16,14 +16,16 @@ const ChatbotMessageWithWidget = ({
 }) => {
   return (
     <Fragment>
-      <ChatbotMessage
-        {...passDownProps}
-        customStyles={customStyles.botMessageBox}
-        messages={messages}
-        withAvatar={withAvatar}
-        setState={setState}
-        customComponents={customComponents}
-      />
+      { passDownProps.message === '' ? null :
+        <ChatbotMessage
+          {...passDownProps}
+          customStyles={customStyles.botMessageBox}
+          messages={messages}
+          withAvatar={withAvatar}
+          setState={setState}
+          customComponents={customComponents}
+        />
+      }
       <ConditionallyRender
         ifTrue={!passDownProps.loading}
         show={widgetRegistry.getWidget(passDownProps.widget, {
