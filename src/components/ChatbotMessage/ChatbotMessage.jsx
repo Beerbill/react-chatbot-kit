@@ -56,7 +56,7 @@ const ChatbotMessage = ({
 
   return (
     <ConditionallyRender
-      ifTrue={show}
+      ifTrue={show && message !== ''}
       show={
         <div className="react-chatbot-kit-chat-bot-message-container">
           <ConditionallyRender
