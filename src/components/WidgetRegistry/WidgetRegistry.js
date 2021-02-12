@@ -1,9 +1,10 @@
 import { getObject } from "../Chatbot/utils";
 
 class WidgetRegistry {
-  constructor(setStateFunc, actionProvider) {
+  constructor(setStateFunc, actionProvider, messageParser) {
     this.setState = setStateFunc;
     this.actionProvider = actionProvider;
+    this.messageParser = messageParser;
   }
 
   addWidget = ({ widgetName, widgetFunc, mapStateToProps, props }) => {
@@ -26,6 +27,7 @@ class WidgetRegistry {
       setState: this.setState,
       data: state.passDownProps,
       actionProvider: this.actionProvider,
+      messageParser: this.messageParser,
     };
 
     return widgetObject.widget(props);
